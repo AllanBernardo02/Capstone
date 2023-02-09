@@ -1,15 +1,16 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.set("strictQuery", true);
+mongoose.connect(process.env.MONGO_URL);
 
-const connection = mongoose.connection
+const connection = mongoose.connection;
 
 connection.on("connected", () => {
-    console.log("Mongodb is connected")
-})
+  console.log("Mongodb is connected..");
+});
 
 connection.on("error", () => {
-    console.log("Mongodb is error", error)
-})
+  console.log("Mongodb is error", error);
+});
 
-module.exports = mongoose
+module.exports = mongoose;
