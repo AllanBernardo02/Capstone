@@ -17,19 +17,19 @@ const userSchema = new mongoose.Schema(
         },
 
         isDoctor: {
-            type: boolean,
+            type: Boolean,
             default: false,
         },
         isAdmin: {
-            type: boolean,
+            type: Boolean,
             default: false,
         },
         isApplyDoctor: {
-            type: boolean,
+            type: Boolean,
             default: false,
         },
         isBlocked: {
-            type: boolean,
+            type: Boolean,
             deafault: false,
         },
         seenNotification: {
